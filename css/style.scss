@@ -1,0 +1,24 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+// Externals
+@import "external/_reset";
+
+// System
+@import "system/_vars";
+
+// Main files
+@import "_main";
+@import "_single";
+
+
+body {
+	padding: $paddingBase;
+}
+
+h1 {
+	color: $red;
+	padding: $paddingBase;
+}
