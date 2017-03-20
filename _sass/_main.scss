@@ -1,4 +1,93 @@
+html {
+	box-sizing: border-box;
+}
 
-h1 {
-	color: red;
+* {
+	box-sizing: inherit;
+	&:after, &:before { box-sizing: inherit; }
+}
+
+body {
+	padding: 0;
+	color: black;
+}
+
+img {
+	max-width: 100%;
+}
+
+footer[role="contentinfo"], 
+header[role="banner"] {
+	background: $azul;
+
+	padding: $paddingBase * 2;
+
+	text-align: center;
+	color: white;
+
+	display: flex;
+	flex-direction: column;
+
+	// Elements
+	
+	a { display: block; }
+
+	li svg {
+		width: 40px;
+		fill: white;
+		padding: 5px;
+	}
+
+	& > * { margin: $paddingBase 0; }
+
+	@media screen and (max-width: ($breakpoint -1)) {
+		button { margin: 0 auto; }
+	}
+
+	@media screen and (min-width: $breakpoint) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		padding: ($paddingBase / 2) $paddingBase;
+		
+		& > * { margin: 0; }
+
+		button { order: -1; }
+		button,
+		nav {
+			//width: 25%;
+		}
+
+		h1 {
+			width: 100%;
+			position: absolute;
+			margin: 0 auto;
+		}
+		
+		nav {
+			display: flex;
+			align-items: center;
+		}
+
+		.primaryNav {
+			display: flex;
+		}
+
+	}
+}
+
+footer[role="contentinfo"] {
+	.logo { max-width: 164px; }
+}
+
+.primaryNav {
+	a {
+		padding: $paddingBase;
+	}
+}
+
+.secondaryNav {
+	display: flex;
+	justify-content: center;
 }

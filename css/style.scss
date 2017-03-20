@@ -8,17 +8,8 @@
 
 // System
 @import "system/_vars";
+@import "system/_mixins";
 
 // Main files
 @import "_main";
 @import "_single";
-
-
-body {
-	padding: $paddingBase;
-}
-
-h1 {
-	color: $red;
-	padding: $paddingBase;
-}
