@@ -1,0 +1,88 @@
+.envio-block {
+	padding: 80px 100px;
+	background: #fff;
+	text-align: center;
+	max-width: 728px;
+	margin: 0 auto !important;
+
+	@media screen and (max-width: $breakpointMob) { padding: $paddingBase; }
+}
+.envio-form-header {
+	width: 85%;
+	margin: 0 auto;
+}
+.envio-form-header-title {
+	margin: 0 0 17px 0;
+	padding: 0;
+	color: #233d4f;
+	font-size: 30px;
+	line-height: 1.2em;
+	text-align: inherit;
+
+}
+.envio-form-header-description p {
+	margin: 17px 0;
+	padding: 0;
+	font-size: 15px;
+	line-height: 1.6em;
+	color: $bodyText;
+}  
+.envio-form-body{ padding: 0 0 12px 0; }
+
+.envio-form-fields-wrapper {
+	display: inline-block;
+	width: auto;
+	margin: 12px 0 0 0;
+}
+
+.envio-form-field-wrapper {
+	display: inline-block;
+	width: auto;
+	min-width: 250px;
+	padding: 6px 3px;
+	@media screen and (max-width: $breakpointMob) { min-width: 0; }
+}
+
+.envio-form-field-element {
+	width: 100%;
+	padding: 18px 15px 20px 15px;
+	background: #fff;
+	border: 1px solid rgba(0,0,0,.12);
+	font-family: inherit;
+	font-size: 15px;
+	line-height: normal;
+	outline: none;
+}
+.envio-form-button-wrapper {
+	display: inline-block;
+	width: auto;
+	margin: 12px 0 0 0;
+	padding: 6px 3px;
+}
+
+.envio-form-button {
+	box-shadow: inset 0px 0px 0px 1px $bodyText;
+	box-shadow: inset 0px 0px 0px 1px $bodyText;
+	color: $bodyText;
+	transition: 0.1s background-color linear, 0.1s color linear;
+	@media screen and (max-width: $breakpoint) { min-width: 280px; }
+	&:hover {
+		background: $azul;
+		box-shadow: inset 0px 0px 0px 1px $bodyText;
+		border:1px solid $azul; 
+		.envio-form-button-label {
+			color: #fff;
+		}
+	}
+}
+
+.envio-form-button-label{ color:$bodyText; }
+
+.envio-block .envio-form-footnote p {
+	opacity: .8;
+	margin: 17px 0;
+	padding: 0;
+	font-size: 12px !important;
+	line-height: normal;
+	color:$bodyText;
+}

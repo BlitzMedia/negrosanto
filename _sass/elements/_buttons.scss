@@ -1,0 +1,27 @@
+
+button {
+	header[role="banner"] &,
+	footer[role="contentinfo"] & {
+		border: 1px solid black;
+		background-color: transparent;
+		color: #fff;
+		padding: 21px 34px;
+		
+		font-family: Playfair Display;
+		font-size: 11px;
+		letter-spacing: .3em;
+		font-weight: 700;
+		font-style: normal;
+		text-transform: uppercase;
+	}
+
+	header[role="banner"] & {
+		border-color: white;
+		max-width: 280px;
+	}
+
+	header[role="banner"] &:hover {
+		background-color: white;
+		color: #1d1d1d;
+	}
+}

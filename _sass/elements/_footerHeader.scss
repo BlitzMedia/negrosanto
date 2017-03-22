@@ -1,0 +1,93 @@
+
+
+footer[role="contentinfo"], 
+header[role="banner"] {
+	background: $azul;
+
+	padding: $paddingBase * 2;
+	@media screen and (max-width: $breakpointMob) { padding: $paddingBase; }
+
+	text-align: center;
+	color: white;
+
+	display: flex;
+	flex-direction: column;
+
+	// Elements
+	
+	a { display: block; }
+
+	li svg {
+		width: 40px;
+		fill: white;
+		padding: 5px;
+	}
+	& > * { margin: $paddingBase; }
+
+	@media screen and (max-width: ($breakpoint -1)) {
+		& > * { margin: $paddingBase 0; }
+		.buttonContainer {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
+
+header[role="banner"] {
+	@media screen and (min-width: $breakpoint) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
+		padding: ($paddingBase / 2) $paddingBase;
+		
+		& > * { margin: 0; }
+
+		.buttonContainer {
+			order: -1;
+			text-align: left;
+		}
+		.buttonContainer,
+		nav { width: 33%; }
+
+		h1 {
+			margin: 0 auto;
+		}
+		
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		.primaryNav { display: flex; }
+
+	}
+}
+
+
+.primaryNav {
+	a {
+		padding: $paddingBase;
+	}
+}
+
+.secondaryNav {
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+footer[role="contentinfo"] {
+	padding: ($paddingBase * 3) ($paddingBase * 2) $paddingBase;
+
+	.logo { max-width: 164px; }
+	> * + * { margin-top: $paddingBase * 2; }
+}
+
+.footer-links {
+	display: flex;
+	justify-content: space-between;
+}
